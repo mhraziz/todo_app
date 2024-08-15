@@ -1,7 +1,7 @@
-import TodoEdit from './TodoEdit';
-import { useState } from 'react';
-import EditIcon from '../edit.svg';
-import DeleteIcon from '../delete.svg';
+import { useState } from "react";
+import TodoEdit from "./TodoEdit";
+import EditIcon from "../svgs/edit.svg";
+import DeleteIcon from "../svgs/delete.svg";
 
 const TodoShow = ({ todo, removeTodo, changeTodo }) => {
   const [showEdit, setShowEdit] = useState(false);
@@ -33,14 +33,14 @@ const TodoShow = ({ todo, removeTodo, changeTodo }) => {
 
   return (
     <li className="todo" onDoubleClick={handleDoubleClick}>
-      <p className={todo.completed ? 'completed':""}>{todo.title}</p>
+      <p className={todo.completed ? "completed" : ""}>{todo.title}</p>
 
       <div className="actions">
         <button onClick={handleDelete}>
-          <img src={DeleteIcon} title="Delete" alt=''/>
+          <img src={DeleteIcon} title="Delete" alt="" />
         </button>
         <button onClick={handleEdit}>
-          <img src={EditIcon} title="Edit" alt='' />
+          <img src={EditIcon} title="Edit" alt="" />
         </button>
       </div>
     </li>

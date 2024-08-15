@@ -1,4 +1,4 @@
-import TodoShow from './TodoShow';
+import TodoShow from "./TodoShow";
 
 const TodoList = ({ todos, removeTodo, changeTodo }) => {
   const renderedTodos = todos.map((todo) => {
